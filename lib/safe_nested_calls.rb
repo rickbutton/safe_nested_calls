@@ -1,4 +1,5 @@
 require "safe_nested_calls/version"
+require "safe_nested_calls/railtie" if defined? Rails
 
 module NestedRespondTo
 	def nested_respond_to?(*methods)
