@@ -7,7 +7,7 @@ managing dynamically created objects.
 
 # Installation #
 
-   gem install 'safe_nested_calls'
+    gem install 'safe_nested_calls'
   
 If you are using Rails, then it will automatically load 
 on server start, but if not, somewhere in your code, put:
