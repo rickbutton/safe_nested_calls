@@ -1,0 +1,1 @@
+require 'safe_nested_calls'
