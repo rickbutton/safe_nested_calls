@@ -8,8 +8,8 @@ Gem::Specification.new do |s|
   s.authors     = ["Rick Button"]
   s.email       = ["rickb@extemprep.com"]
   s.homepage    = ""
-  s.summary     = %q{TODO: Write a gem summary}
-  s.description = %q{TODO: Write a gem description}
+  s.summary     = %q{Safely call nested methods in Ruby}
+  s.description = %q{Allows you to safely call nested methods on an object, returning nil if they are undefined. }
 
   s.rubyforge_project = "safe_nested_calls"
 
