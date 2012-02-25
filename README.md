@@ -38,19 +38,21 @@ This method can call the actual nested method desired, with optional parameters
 
     object.safe_nested_method(:one, :two, :three) => returns object.one.two.three
       
-To use parameters, use a hash of :method => args, where args are the method arguments
-
-    object.safe_nested_method(:one => 1, :two => [1, 2], :three => [1,2,3])
-      
-which is equivalent to (would throw NoMethodError if a method wasn't defined)
-
-    object.one(1).two(1,2).three(1,2,3)
-      
 
 #### Parameters #####
 
+      
+To use parameters, use a hash of :method => args, where args are the method arguments
+
+    object.safe_nested_method(:one => 1, :two => [1, 2], :three => [1,2,3])
+    
+          
+which is equivalent to (would throw NoMethodError if a method wasn't defined)
+
+    object.one(1).two(1,2).three(1,2,3)
+
 If you need to call of mix of methods with and without parameters, set the arguments for 
-the methods without parameters to :none
+the methods without parameters to `:none`
 
     object.safe_nested_method(:get => :none, :increment => 4, :save => :none)
       
