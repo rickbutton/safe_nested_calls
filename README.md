@@ -3,7 +3,8 @@
 This gem allows you to safely call nested methods 
 on an object, and not worry about whether or not
 the methods are defined. It is very useful for 
-managing dynamically created objects.
+managing dynamically created objects that may not
+have some methods defined.
 
 # Installation #
 
@@ -41,7 +42,7 @@ To use parameters, use a hash of :method => args, where args are the method argu
 
     object.safe_nested_method(:one => 1, :two => [1, 2], :three => [1,2,3])
       
-which is equivalent to
+which is equivalent to (would throw NoMethodError if a method wasn't defined)
 
     object.one(1).two(1,2).three(1,2,3)
       
@@ -53,6 +54,6 @@ the methods without parameters to :none
 
     object.safe_nested_method(:get => :none, :increment => 4, :save => :none)
       
-which is equivalent to
+which is equivalent to (would throw NoMethodError if a method wasn't defined)
 
     object.get().increment(4).save()
